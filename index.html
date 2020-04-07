@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo Collapsible</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="sidebar_menu.css">
+  </head>
+  <body>
+    <ul id="sidebar_menu" class="sidebar_menu">
+    	<li id="sidebarNode1" node_level="1">
+          <span class="sidebar_item1" sidebar_type="item_title">Admisión y Citas</span>
+          <ul id="sidebarNode1Childs" class="sidebar_subItems" sidebar_type="subItems">
+      		  <li id="sidebarNode2" node_level="2"> <span sidebar_type="item_title">Pacientes</span> </li>
+            <li id="sidebarNode3" node_level="2"> <span sidebar_type="item_title">Agendar Citas </span> </li>
+            <li id="sidebarNode4" node_level="2">
+                <span sidebar_type="item_title">Consulta de Citas</span>
+                <ul id="sidebarNode4Childs" class="sidebar_subItems" sidebar_type="subItems">
+                    <li id="sidebarNode12" node_level="3"> <span sidebar_type="item_title"> Citas por paciente</span></li>
+                    <li id="sidebarNode5" node_level="3"> <span sidebar_type="item_title"> Citas por médico</span></li>
+                </ul>
+            </li>
+          </ul>
+      </li>
+
+    	<li id="sidebarNode6" node_level="1">
+          <span class="sidebar_item1" sidebar_type="item_title">Infraestructura y Recursos</span>
+          <ul id="sidebarNode1Childs" class="sidebar_subItems" sidebar_type="subItems">
+            <li id="sidebarNode7" node_level="2"> <span sidebar_type="item_title"> Personal</span></li>
+            <li id="sidebarNode8" node_level="2"> <span sidebar_type="item_title"> Centro de Salud</span></li>
+            <li id="sidebarNode9" node_level="2"> <span sidebar_type="item_title"> Zonas (infraestructura)</span></li>
+            <li id="sidebarNode10" node_level="2"> <span sidebar_type="item_title"> Ambientes </span></li>
+          </ul>
+      </li>
+
+    </ul>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="sidebar_menu.js"></script>
+    <script type="text/javascript">
+      $("#sidebar_menu").sidebar_menu();
+      sidebar_show_byId('sidebarNode12');
+
+
+    </script>
+  </body>
+</html>
